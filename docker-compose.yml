@@ -1,0 +1,10 @@
+version: '2'
+
+services: 
+ dockerapp:
+  image: dockerapp
+  build: ./app-node
+  volumes:
+    - ./app-node:/usr/src/app
+  ports:
+    - 80:3000
